@@ -9,12 +9,23 @@ class Users::SessionsController < Devise::SessionsController
 # POST /resource/sign_in
 #   def create
 #     super
-  # end
+# end
 
 # DELETE /resource/sign_out
-# def destroy
-#   super
-# end
+  def destroy
+    # super
+    signed_out = (Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name))
+    set_flash_message :notice, :signed_out if signed_out && is_flashing_format?
+    yield if block_given?
+    respond_to do |format|
+      format.all { head :no_content }
+      if params[:return_url].present?
+        format.any(*navigational_formats) { redirect_to params[:return_url] }
+      else
+        format.any(*navigational_formats) { redirect_to after_sign_out_path_for(resource_name) }
+      end
+    end
+  end
 
 # protected
 
