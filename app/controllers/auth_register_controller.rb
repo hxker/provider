@@ -45,7 +45,7 @@ class AuthRegisterController < ApplicationController
 
   def user
     hash = {
-        provider: 'ssa',
+        provider: 'register',
         id: current_user.id.to_s,
         info: {
             email: current_user.email,

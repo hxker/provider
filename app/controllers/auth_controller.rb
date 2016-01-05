@@ -45,7 +45,7 @@ class AuthController < ApplicationController
 
   def user
     hash = {
-      provider: 'sso',
+      provider: 'login',
       id: current_user.id.to_s,
       info: {
          email: current_user.email,

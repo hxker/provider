@@ -48,5 +48,6 @@ group :development, :test do
   gem 'oauth2'
   gem 'omniauth-oauth2'
   gem 'better_errors'
+  gem 'pry'
 end
 
