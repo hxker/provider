@@ -69,6 +69,7 @@ class AuthRegisterController < ApplicationController
 
   private
   def user_sign_up
+    session["user_return_to"] = request.fullpath.gsub('register','login')
     redirect_to '/users/sign_up'
   end
 
