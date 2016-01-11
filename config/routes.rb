@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # Easier to make GET request from the client
   devise_for :users, sign_out_via: [:get, :delete],
-             controllers: {sessions: 'users/sessions', registrations: 'users/registrations', passwords: 'users/passwords', omniauth_callbacks: 'callbacks'}
+             controllers: {sessions: 'users/sessions', registrations: 'users/registrations', passwords: 'users/passwords', confirmations: 'users/confirmations', omniauth_callbacks: 'callbacks'}
 
   root 'home#index'
 
@@ -17,7 +17,11 @@ Rails.application.routes.draw do
   match '/auth/register/user' => 'auth_register#user', via: :all
   # match '/oauth/token' => 'auth#access_token', via: :all
 
-
+  resources :accounts, only: [:new, :create, :destroy] do
+    collection do
+      post :register_email_exists
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

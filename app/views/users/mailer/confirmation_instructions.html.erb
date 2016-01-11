@@ -2,4 +2,8 @@
 
 <p>You can confirm your account email through the link below:</p>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+<p><%= link_to 'Confirm my account', "http://localhost:3000/users/confirmation?return_url=http://localhost:3001&confirmation_token=#{@token}" %></p>
+<p>若不能点击激活按钮，请复制下面链接在浏览器中打开来激活</p>
+<p> http://localhost:3000/users/confirmation?return_url=http://localhost:3001&confirmation_token=<%= @token %></p>
+
+<p>若您没有在豆姆平台注册账户，请忽略该邮件，不会对您造成任何影响</p>

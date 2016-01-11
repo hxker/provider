@@ -17,8 +17,8 @@ class AuthController < ApplicationController
 
     AccessGrant.prune!
     create_hash = {
-      client: application,
-      state: params[:state]
+        client: application,
+        state: params[:state]
     }
     access_grant = current_user.access_grants.create(create_hash)
     redirect_to access_grant.redirect_uri_for(params[:redirect_uri])
@@ -45,17 +45,17 @@ class AuthController < ApplicationController
 
   def user
     hash = {
-      provider: 'login',
-      id: current_user.id.to_s,
-      info: {
-         email: current_user.email,
-      },
-      extra: {
-        #  first_name: current_user.first_name,
-        #  last_name: current_user.last_name
-        first_name: '',
-        last_name: ''
-      }
+        provider: 'login',
+        id: current_user.id.to_s,
+        info: {
+            email: current_user.email,
+        },
+        extra: {
+            #  first_name: current_user.first_name,
+            #  last_name: current_user.last_name
+            first_name: '',
+            last_name: ''
+        }
     }
 
     render :json => hash.to_json

@@ -1,8 +1,8 @@
 class AuthRegisterController < ApplicationController
-
-  before_filter :authenticate_user_from_token!, :except => [:access_token]
-  before_filter :user_sign_up, :except => [:access_token]
-  skip_before_filter :verify_authenticity_token, :only => [:access_token]
+  before_filter :user_sign_up
+  # before_filter :authenticate_user_from_token!, :except => [:access_token]
+  # before_filter :user_sign_up, :except => [:access_token]
+  # skip_before_filter :verify_authenticity_token, :only => [:access_token]
 
 
   def authorize
@@ -69,7 +69,7 @@ class AuthRegisterController < ApplicationController
 
   private
   def user_sign_up
-    session["user_return_to"] = request.fullpath.gsub('register','login')
+    session[:user_return_to] = request.fullpath.gsub('register', 'login')
     redirect_to '/users/sign_up'
   end
 

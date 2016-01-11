@@ -49,5 +49,7 @@ group :development, :test do
   gem 'omniauth-oauth2'
   gem 'better_errors'
   gem 'pry'
+  gem 'pry-remote'
+  gem 'pry-nav'
 end
-
+gem 'thin'

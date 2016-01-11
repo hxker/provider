@@ -1,0 +1,123 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+# zh-CN.devise.confirmations.user.confirmed
+# zh-CN.activemodel.errors.models.sing_up.attributes.password.blank
+# Password translation missing: zh-CN.activerecord.errors.models.user.attributes.password.blank
+
+
+zh-CN:
+  devise:
+    confirmations:
+      confirmed: "您的账户已经成功验证,请登录." # Your email address has been successfully confirmed.
+      send_instructions: "几分钟后，您将收到确认账号的电子邮件." # You will receive an email with instructions for how to confirm your email address in a few minutes.
+      send_paranoid_instructions: "如果您的邮箱存在我们的数据库中,您将收到确认账号的电子邮件." # If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes.
+    failure:
+      already_authenticated: "您已经登录." # You are already signed in.
+      inactive: "您的账号还没有被激活." # Your account is not activated yet.
+      invalid: "账号或密码错误." # Invalid %{authentication_keys} or password.
+      locked: "您的账号已经被锁定.请联系网站管理员" # Your account is locked.
+      last_attempt: "在账户被锁定之前你还有1次尝试机会." # You have one more attempt before your account is locked
+      not_found_in_database: "%{authentication_keys}或密码错误." # Invalid %{authentication_keys} or password.
+      timeout: "您的登录时间已经过期,在操作之前请重新登录." # Your session expired. Please sign in again to continue.
+      unauthenticated: "您在进行下一步操作之前请登录或注册." # You need to sign in or sign up before continuing.
+      unconfirmed: "账户未激活 请前往注册邮箱激活账户." # You have to confirm your email address before continuing.
+    mailer:
+      confirmation_instructions:
+        subject: "请激活您的邮箱" # Confirmation instructions
+      reset_password_instructions:
+        subject: "重新设定您的密码" # Reset password instructions
+      unlock_instructions:
+        subject: "解除账户锁定 " # Unlock instructions
+
+    omniauth_callbacks:
+      failure: "Could not authenticate you from %{kind} because \"%{reason}\"." #
+      success: "Successfully authenticated from %{kind} account." #
+    passwords:
+      no_token: "不通过密码重置邮件，您不能访问该页面。如果您来自一个密码重置邮件，请确保您使用提供的完整的URL." # You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided.
+      send_instructions: "您将在几分钟内收到一封重置密码的邮件." # You will receive an email with instructions on how to reset your password in a few minutes.
+      send_paranoid_instructions: "如果您的账户存在,在您的注册邮箱中将收到一封验证账户的邮件." # If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes.
+      updated: "密码重置成功,您现在已经登录." # Your password has been changed successfully. You are now signed in.
+      updated_not_active: "您的密码已经修改成功." # Your password has been changed successfully.
+    registrations:
+      destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon." #
+      signed_up: "欢迎您!您已经成功注册." # Welcome! You have signed up successfully.
+      signed_up_but_inactive: "您已经成功注册,但是您的邮箱还没有得到验证,所以暂时还不能登录." # You have signed up successfully. However, we could not sign you in because your account is not yet activated.
+      signed_up_but_locked: "您已经成功注册. 但是由于您的账户已经被锁定,所以暂时不能登录." # You have signed up successfully. However, we could not sign you in because your account is locked.
+      signed_up_but_unconfirmed: "一个含有验证信息的链接已经发送到了您的邮箱,请打开此邮件来激活您的账户." # A message with a confirmation link has been sent to your email address. Please follow the link to activate your account.
+      update_needs_confirmation: "您已经成功更新了您的账户信息, 但是我们没有验证您的新的邮件地址. 请登录您的邮箱并点击验证的链接来完成此次邮箱地址的更改." # You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirm link to confirm your new email address.
+      updated: "您已经成功更新了您的账户信息." # Your account has been updated successfully.
+    sessions:
+      signed_in: "登录成功." # Signed in successfully.
+      already_signed_out: "已经注销成功." # Signed out successfully.
+      signed_out: "注销成功"
+    unlocks:
+      send_instructions: "您的注册邮箱地址将在几分钟内收到一封邮件关于如何解除账户锁定." # You will receive an email with instructions for how to unlock your account in a few minutes.
+      send_paranoid_instructions: "如果您的账户存在,您的邮箱在几分钟内将收到一份邮件关于如何解除账户锁定." # If your account exists, you will receive an email with instructions for how to unlock it in a few minutes.
+      unlocked: "您的账户已经成功解除锁定，继续操作前请登录." # Your account has been unlocked successfully. Please sign in to continue.
+  errors:
+    messages:
+      already_confirmed: "已经通过验证,请尝试登录" # was already confirmed, please try signing in
+      confirmation_period_expired: "需要验证在%{period}之内，请重新获取" # needs to be confirmed within %{period}, please request a new one
+      expired: "已经过期,请重新获取" # has expired, please request a new one
+      not_found: "不存在" # not found
+      not_locked: "没有锁定" # was not locked
+      record_invalid: "验证失败"
+      taken: '已经被注册'
+#      wrong_length: '位数不对'
+#      blank: '不能为空'
+
+      not_saved:
+        one: "发生了一个错误在%{resource} 保存的时候:" # 1 error prohibited this %{resource} from being saved:
+        other: "%{count}个错误禁止了%{resource}的保存:" # %{count} errors prohibited this %{resource} from being saved:
+
+
+
+
+#        views:
+#          commons:
+#            sidebar:
+#              title: '操作面版'
+#          links:
+#            sign_in: '登录'
+#            sign_up: '注册'
+#            forget_pass: '忘记密码?'
+#            resend_confirmation: "没有收到确认指令？"
+#            resend_unlock: "没有收到解锁指令？"
+#            omni_auth: "用%{provider}登录"
+#          confirmations:
+#            new:
+#              title: '重新发送确认指令'
+#              submit: '重发确认邮件'
+#          passwords:
+#            edit:
+#              title: '修改密码'
+#              submit: '修改'
+#            new:
+#              title: '忘记密码'
+#              submit: '发送重置邮件'
+#          registrations:
+#            edit:
+#              title: '更改注册信息'
+#              password: '修改密码'
+#              submit: '修改'
+#              change_pass_tip: "如果你不想改变,留下空白"
+#            new:
+#              title: '注册'
+#              submit: '注册'
+#            binding:
+#              title: '绑定'
+#              submit: '绑定'
+#          sessions:
+#            new:
+#              title: '登录'
+#              submit: '登录'
+#              remember_me: '记住我'
+#          unlocks:
+#            new:
+#              title: '重发解锁指令'
+#              submit: '重发解锁邮件'
+#        navigation:
+#          sign_in: '登录'
+#          sign_up: '注册'
+#          sign_out: '退出'
+#          change_password: '修改密码'
+#          change_registration: '修改登记'

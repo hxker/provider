@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+  <!--<title></title>-->
+</head>
+<body>
+<h1>您好！<%= @email %></h1>
+
+<p>为防止他人冒用您的邮箱在豆姆注册账号,需对该邮箱进行验证;若不是您亲自所为，请忽略该邮件
+
+<p>该操作的验证码为<span style="color: darkred;font-size: 20px"><%= @code %></span>，10分钟内有效，请尽快验证</p>
+
+</body>
+</html>
